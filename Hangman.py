@@ -31,11 +31,9 @@ def guess():
     global all_guesses # necessary to make sure changes to the variable persist outside the function
     global user_guess # necessary to make sure changes to the variable persist outside the function
     user_guess = input("\nEnter a letter: ") # ask the user to enter a guess and assign it to a variable
-    print("\n") # used to create separation for better visibility
+    print("\n\n") # used to create separation for better visibility
     if user_guess in all_guesses: # if the user is choosing a repeated letter
         print("\nYou already tried that letter. Try another.\n") # let the user know they already used that letter before
-        user_guess = input("\nEnter a letter: ") # ask the user to enter a guess and assign it to a variable
-        print("\n") # used to create separation for better visibility
     else: # when user does not repeat a letter
         all_guesses += user_guess # assign the users guess to the list  of all user's guesses
     if user_guess in chosen_word: # if the user chose a letter that is in the chosen word variable
